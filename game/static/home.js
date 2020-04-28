@@ -27,10 +27,11 @@ function chance(id) //passing the first player information to view
     if(c == 1) {
         var x = Math.floor(Math.random() * 8);
         board[x] = 1;
-        document.getElementById(x+1).value = 'X';
+		document.getElementById(x+1).value = 'X';
+		document.getElementById(x+1).disabled=true;
     }
     else {
-        document.getElementById("result").innerHTML = "click on any box below";
+        document.getElementById("result").innerHTML = "click on any box of grid";
     }
 }
 function change(xpos,ypos,id) //passing the user choice or move to view and updating the computer's move
@@ -39,13 +40,15 @@ function change(xpos,ypos,id) //passing the user choice or move to view and upda
     var index = 3*parseInt(xpos)+parseInt(ypos);
     if(c == 1) {
         if(y.value == "") {
-    	   y.value = '0';
+		   y.value = '0';
+		   y.disabled=true;
            board[index] = 2;
         }
     }
     else if(c == 2) {
         if(y.value == ""){
-    	   y.value = 'X';
+		   y.value = 'X';
+		   y.disabled=true;
            board[index] = 2;
         }
     }
@@ -61,7 +64,8 @@ function change(xpos,ypos,id) //passing the user choice or move to view and upda
             		if(json['res'] == 1) {
             			if(json['winner'] == 'comp') {
             				y = document.getElementById(json['val']+1);
-            				y.value = 'X';
+							y.value = 'X';
+							y.disabled=true;
             				document.getElementById("result").innerHTML = "Lost :( Refresh page to restart";
             			}
             			else if(json['winner'] == 'player') {
@@ -70,7 +74,7 @@ function change(xpos,ypos,id) //passing the user choice or move to view and upda
             			else {
             				y = document.getElementById(json['val']+1);
             				y.value = 'X';
-
+							y.disabled=true;
             				document.getElementById("result").innerHTML = "Draw! Refresh page to restart";
             			}
                         c = 0;
@@ -78,14 +82,16 @@ function change(xpos,ypos,id) //passing the user choice or move to view and upda
             		else {
             			y1 = document.getElementById(json['val']+1);
                         board[parseInt(json[['val']])] = 1;
-            			y1.value = 'X';
+						y1.value = 'X';
+						y1.disabled=true;
             		}
             	}
             	else {
             		if(json['res'] == 1) {
             			if(json['winner'] == 'comp') {
             				y = document.getElementById(json['val']+1);
-            				y.value = 'O';
+							y.value = 'O';
+							y.disabled=true;
             				document.getElementById("result").innerHTML = "Lost :( Refresh page to restart";
                             flag = 1;
             			}
@@ -101,7 +107,8 @@ function change(xpos,ypos,id) //passing the user choice or move to view and upda
             		}
             		else {
             			y1 = document.getElementById(json['val']+1);
-            			y1.value = 'O';
+						y1.value = 'O';
+						y1.disabled=true;
                         board[parseInt(json[['val']])] = 1;
             		}
             	}

@@ -14,7 +14,7 @@ body {
 	margin:0;
 	font-size:50px;
 	text-align: center;
-    background-color: rgb(240, 153, 153);
+    background-color: rgb(243, 204, 204);
 }
 #content {
 	position: relative;
@@ -33,9 +33,9 @@ body {
 	margin:0 45px 0 0px;
     font-weight: bold;
 }
-#header h1 {
+#header h2 {
 	text-align: center;
-    color:#FFFF00;
+    color:rgb(255, 0, 0);
 }
 #header {
 	position:relative;
