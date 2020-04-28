@@ -30,7 +30,7 @@ function chance(id) //passing the first player information to view
         document.getElementById(x+1).value = 'X';
     }
     else {
-        document.getElementById("result").innerHTML = "";
+        document.getElementById("result").innerHTML = "click on any box below";
     }
 }
 function change(xpos,ypos,id) //passing the user choice or move to view and updating the computer's move
@@ -62,16 +62,16 @@ function change(xpos,ypos,id) //passing the user choice or move to view and upda
             			if(json['winner'] == 'comp') {
             				y = document.getElementById(json['val']+1);
             				y.value = 'X';
-            				document.getElementById("result").innerHTML = "YOU LOST";
+            				document.getElementById("result").innerHTML = "Lost :( Refresh page to restart";
             			}
             			else if(json['winner'] == 'player') {
-            				document.getElementById("result").innerHTML = "YOU WON";
+            				document.getElementById("result").innerHTML = "Won :) Refresh page to restart";
             			}
             			else {
             				y = document.getElementById(json['val']+1);
             				y.value = 'X';
 
-            				document.getElementById("result").innerHTML = "GAME DRAW";
+            				document.getElementById("result").innerHTML = "Draw! Refresh page to restart";
             			}
                         c = 0;
             		}
@@ -86,15 +86,15 @@ function change(xpos,ypos,id) //passing the user choice or move to view and upda
             			if(json['winner'] == 'comp') {
             				y = document.getElementById(json['val']+1);
             				y.value = 'O';
-            				document.getElementById("result").innerHTML = "YOU LOST";
+            				document.getElementById("result").innerHTML = "Lost :( Refresh page to restart";
                             flag = 1;
             			}
             			else if(json['winner'] == 'player') {
-            				document.getElementById("result").innerHTML = "YOU WON";
+            				document.getElementById("result").innerHTML = "Won :) Refresh page to restart";
                             flag = 1;
             			}
             			else {
-            				document.getElementById("result").innerHTML = "GAME DRAW";
+            				document.getElementById("result").innerHTML = "Draw! Refresh page to restart";
                             flag = 1;
             			}
                         c = 0;
