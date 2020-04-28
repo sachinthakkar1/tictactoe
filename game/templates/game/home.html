@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'home.css' %}" type="text/css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="{% static 'home.js' %}"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <center>
+                <h1 id="result"></h1>
+            </center>
+        </div>
+        <div id="content">
+            <table>
+                <tr>
+                    <td><input type="button" id="1" onclick="change(0,0,1)"></input></td>
+                    <td><input type="button" id="2" onclick="change(0,1,2)"></input></td>
+                    <td><input type="button" id="3" onclick="change(0,2,3)"></input></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="4" onclick="change(1,0,4)"></input></td>
+                    <td><input type="button" id="5" onclick="change(1,1,5)"></input></td>
+                    <td><input type="button" id="6" onclick="change(1,2,6)"></input></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="7" onclick="change(2,0,7)"></input></td>
+                    <td><input type="button" id="8" onclick="change(2,1,8)"></input></td>
+                    <td><input type="button" id="9" onclick="change(2,2,9)"></input></td>
+                </tr>
+            </table>
+        </div>
+    
+    <div id="footer">
+        <table>
+            <tr>
+                <td><button type="button" class="btn btn-success" id="10" onclick="chance(10)">Let me start</button></td>
+                
+                <td><button type="button" class="btn btn-warning" id="11" onclick="chance(11)">Let AI start</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+
+</html>

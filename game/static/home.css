@@ -1,0 +1,43 @@
+
+body {
+	background-image:url("/static/ph2.jpg");
+	background-size: 100%;
+}
+
+#content table {
+	height:240px;
+	width:240px;
+}
+#content input {
+	height:80px;
+	width:80px;
+	margin:0;
+	font-size:50px;
+	text-align: center;
+    background-color: rgb(240, 153, 153);
+}
+#content {
+	position: relative;
+	top:10vw;
+	left:25vw;
+}
+#footer {
+	position:relative;
+	top:12vw;
+	left:25vw;
+}
+#footer input {
+	height:30px;
+	width:100px;
+    background-color: #C0C0C0;
+	margin:0 45px 0 0px;
+    font-weight: bold;
+}
+#header h1 {
+	text-align: center;
+    color:#FFFF00;
+}
+#header {
+	position:relative;
+	text-align: center;
+}
