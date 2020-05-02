@@ -41,3 +41,10 @@ body {
 	position:relative;
 	text-align: center;
 }
+#mytext{
+	position: relative;
+    color: white;
+    top: 15vw;
+    left: 30vw;
+    font-size: large;
+}
